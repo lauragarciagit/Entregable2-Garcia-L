@@ -1,15 +1,18 @@
 //Ingreso de nombre//
 
-const nombre = document.getElementById("nombre")
-const btnNombre = document.querySelector("#btnNombre")
+const nombre = document.getElementById("nombre");
+const btnEnviar = document.getElementById("btnEnviar");
+const mensaje = document.getElementById("mensaje");
 
-btnNombre.addeventlistener("click", ()=>{
-    const nuevoTexto = nombre.value
-    if(nuevoTexto.trim() !== ""){
-        nombre.textContent = nuevoTexto;
-        nombre.value = ""
+btnEnviar.addEventListener("click", ()=>{
+    const nuevoTexto = nombre.value.trim()
+    if(nuevoTexto !== "") {
+        mensaje.textContent = "¡Hola, ${nuevoTexto}! Bienvenido/a a la trivia.";
+        mensaje.style.color = "green";
+        nombre.value = "";
         nombre.focus();
     }else {
-        alert("Debes ingresar un texto válido")
+        mensaje.textContent = "Debes ingresar un texto válido.";
+        mensaje.style.color = "red";
     }
 })
