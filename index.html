@@ -1,12 +1,35 @@
-<div class="cards">
-    <div class="card">
-        <p class="pregunta">¿Quién escribió <em>El conventillo de la Paloma</em>?</p>
-        <div class="opciones">
-            <button data-correcto="false">Federico García Lorca</button>
-            <button data-correcto="true">Alberto Vaccarezza</button>
-            <button data-correcto="false">Roberto Cossa</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Teatral</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js">defer</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Teatral</h1>
+
+        <div class="name-input">
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre aquí...">
+            <button id="btnNombre">Enviar</button>
         </div>
-    </div>
+
+        <div class="puntaje">
+            Puntaje: <span id="puntos">0</span>
+        </div>
+
+    <div class="cards">
+        <div class="card">
+            <p class="pregunta">¿Quién escribió <em>El conventillo de la Paloma</em>?</p>
+            <div class="opciones">
+                <button data-correcto="false">Federico García Lorca</button>
+                <button data-correcto="true">Alberto Vaccarezza</button>
+                <button data-correcto="false">Roberto Cossa</button>
+            </div>
+        </div>
 
     <div class="card">
         <p class="pregunta">¿A qué género pertenece <em>Esperando a Godot</em>?</p>
@@ -27,11 +50,47 @@
     </div>
 
     <div class="card">
-        <p class="pregunta">¿Quién ganó el Martín Fierro de oro 2025?</p>
+        <p class="pregunta">¿Quién ganó el Martín Fierro Teatro de oro 2025?</p>
         <div class="opciones">
             <button data-correcto="false">Julio Chávez</button>
             <button data-correcto="false">Nicolás Vázquez</button>
             <button data-correcto="true">Gabriel Goity</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p class="pregunta">¿Qué personaje dice la frase “Ser o no ser, esa es la cuestión”?</p>
+        <div class="opciones">
+            <button data-correcto="false">Macbeth</button>
+            <button data-correcto="true">Hamlet</button>
+            <button data-correcto="false">Otel·lo</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p class="pregunta">¿Cuál de estas obras fue escrita por Tenessee Williams?</p>
+        <div class="opciones">
+            <button data-correcto="false">Un tranvía llamado libertad</button>
+            <button data-correcto="true">Un tranvía llamado deseo</button>
+            <button data-correcto="false">La gata sobre el tejado de zinc caliente</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p class="pregunta">¿Qué obra fue escrita por Arthur Miller?</p>
+        <div class="opciones">
+            <button data-correcto="true">La muerte de un viajante</button>
+            <button data-correcto="false">La gaviota</button>
+            <button data-correcto="false">Esperando a Godot</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p class="pregunta">¿Quién escribió <em>El zoo de cristal</em>?</p>
+        <div class="opciones">
+            <button data-correcto="false">Edward Albee</button>
+            <button data-correcto="true">Tennessee Williams</button>
+            <button data-correcto="false">Sam Shepard</button>
         </div>
     </div>
 </div>
