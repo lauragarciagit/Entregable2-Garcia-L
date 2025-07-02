@@ -23,8 +23,14 @@ const botonEliminar = document.getElementById("eliminarNombre");
 botonGuardar.addEventListener("click", () => {
   const nuevoTexto = nombre.value.trim()
   if (nuevoTexto) {
-    localStorage.setItem("nombre", nuevoTexto)
-    
+    // Paso 1: obtener el array actual 
+    let nombres = JSON.parse(localStorage.getItem("nombres")) || [];
+
+    // Paso 2: agregar el nuevo nombre
+    nombres.push(nuevoTexto);
+
+    // Paso 3: guardar de nuevo en localStorage
+    localStorage.setItem("nombres", JSON.stringify(nombres)) 
   }
 })
 //Eliminar nombre local storage//
