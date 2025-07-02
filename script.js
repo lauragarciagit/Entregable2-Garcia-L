@@ -15,6 +15,25 @@ btnEnviar.addEventListener("click", ()=>{
     }
 })
 
+//guardar nombre en local storage//
+const botonGuardar = document.getElementById("guardarNombre");
+const botonEliminar = document.getElementById("eliminarNombre");
+
+
+botonGuardar.addEventListener("click", () => {
+  const nuevoTexto = nombre.value.trim()
+  if (nuevoTexto) {
+    localStorage.setItem("nombre", nuevoTexto)
+    
+  }
+})
+//Eliminar nombre local storage//
+botonEliminar.addEventListener("click", () => {
+  localStorage.removeItem("nombre")
+    
+  }
+)
+
 //Se pinta de acuerdo a la respuesta dada//
 
 const buttons = document.querySelectorAll('.btn');
