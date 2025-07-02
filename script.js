@@ -14,3 +14,31 @@ btnEnviar.addEventListener("click", ()=>{
         mensaje.textContent = "Debes ingresar un texto válido.";
     }
 })
+
+//Se pinta de acuerdo a la respuesta dada//
+
+const buttons = document.querySelectorAll('.btn');
+const respuesta = document.getElementById('respuesta');
+
+buttons.forEach(button => {
+button.addEventListener('click', () => {
+const isCorrect = button.getAttribute('data-correcto') === 'true';
+
+if (isCorrect) {
+    button.style.backgroundColor = "#4CAF50"; // verde
+    button.style.color = "white";
+    respuesta.textContent = "¡Correcto!";
+    respuesta.style.color = "#4CAF50";
+
+} else {
+    button.style.backgroundColor = "#f44336"; // rojo
+    button.style.color = "white";
+    respuesta.textContent = "Incorrecto.";
+    respuesta.style.color = "#f44336";
+
+}
+
+// Desactivar todos los botones
+buttons.forEach(btn => btn.disabled = true);
+});
+});
