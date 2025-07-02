@@ -60,7 +60,9 @@ if (isCorrect) {
 
 }
 
-// Desactivar todos los botones
-buttons.forEach(btn => btn.disabled = true);
+// Desactivar solo los botones de esta tarjeta
+const opciones = card.querySelectorAll('.btn');
+opciones.forEach(btn => btn.disabled = true);
+
 });
 });
