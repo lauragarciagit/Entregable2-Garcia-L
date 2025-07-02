@@ -18,11 +18,14 @@ btnEnviar.addEventListener("click", ()=>{
 //Se pinta de acuerdo a la respuesta dada//
 
 const buttons = document.querySelectorAll('.btn');
-const respuesta = document.getElementById('respuesta');
 
 buttons.forEach(button => {
 button.addEventListener('click', () => {
 const isCorrect = button.getAttribute('data-correcto') === 'true';
+
+//Para que busque por contenedor y luego ubique el div correspondiente a la respuesta//
+const card = button.closest('.card');
+const respuesta = card.querySelector('.respuesta');
 
 if (isCorrect) {
     button.style.backgroundColor = "#4CAF50"; // verde
