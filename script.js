@@ -9,7 +9,7 @@ btnEnviar.addEventListener("click", () => {
     mensaje.textContent = `¡Hola, ${nuevoTexto}! Bienvenido/a a la trivia.`
     //nombre.value = ""; Se quitó para que pueda seguir con la opción de "guardar" o "eliminar" en el local storage
     nombre.focus()
-  } else {
+  } else  {
     mensaje.textContent = "Debes ingresar un texto válido."
   }
 })
@@ -50,13 +50,12 @@ buttons.forEach((button) => {
     const respuesta = card.querySelector(".respuesta")
 
     //Puntaje. Suman 30 puntos por cada correcta y restan 10 puntos por incorrecta.
-
     function actualizarPuntaje() {
-      document.getElementById("puntuacion").textContent = puntos
+        document.getElementById("puntuacion").textContent = puntos
     //aqui me queda pendiente guardar valores en LocalStorage en la misa posicion del array que "nombre".
     }
     
-    //Mensaje ganador
+    //Mensaje ganador y no ganador
     const puntosGanador = document.getElementById("puntosGanador")
     if (puntos >=200) {
         puntosGanador.innerText = "Felicitaciones! 🎉 ¡Ganaste! 🎉 2 entradas al teatro!!"
@@ -65,7 +64,8 @@ buttons.forEach((button) => {
         puntosGanador.style.fontWeight = "bold"  // negrita
         puntosGanador.style.textShadow = "1px 1px 2px black"  // opcional: para más impacto visual
 
-    } else {
+    }
+       else { //Error. Me corre ni bien genero la primer respuesta. (Buscando el error)
         puntosGanador.innerText = "Estuviste cerca de ganarte unas entradas al teatro 😞 Será la próxima..."
         puntosGanador.style.color = "#8D6E63"    // violeta apagado
         puntosGanador.style.fontSize = "1.2rem"  // tamaño chico
