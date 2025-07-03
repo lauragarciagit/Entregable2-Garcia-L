@@ -7,7 +7,7 @@ const mensaje = document.getElementById("mensaje");
 btnEnviar.addEventListener("click", ()=>{
     const nuevoTexto = nombre.value.trim()
     if(nuevoTexto !== "") {
-        mensaje.textContent = `¡Hola, ${nuevoTexto}! Bienvenido/a a la trivia.`;
+        mensaje.textContent = `¡Hola, ${nuevoTexto}! Bienvenido/a a la trivia!`
         //nombre.value = ""; Se quitó para que pueda seguir con la opción de "guardar" o "eliminar" en el local storage
         nombre.focus();
     }else {
