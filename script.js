@@ -39,6 +39,7 @@ botonEliminar.addEventListener("click", () => {
 
 const buttons = document.querySelectorAll(".btn")
 let puntos = 0
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const isCorrect = button.getAttribute("data-correcto") === "true"
@@ -48,11 +49,22 @@ buttons.forEach((button) => {
     const respuesta = card.querySelector(".respuesta")
 
     //Puntaje. Suman 30 puntos por cada correcta y restan 10 puntos por incorrecta.
+
     function actualizarPuntaje() {
       document.getElementById("puntuacion").textContent = puntos
-      //aqui me queda pendiente guardar valores en LocalStorage en la misa posicion del array que "nombre".
+    //aqui me queda pendiente guardar valores en LocalStorage en la misa posicion del array que "nombre".
     }
-   
+    
+    //Mensaje ganador
+    const puntosGanador = document.getElementById("puntosGanador")
+    if (puntos >=200) {
+        puntosGanador.innerText = "Felicitaciones! Ganaste 2 entradas al teatro!!"
+        puntosGanador.style.color = "#4CAF30"
+
+    }   else {
+        puntosGanador.innerText = "Estuviste cerca de ganarte unas entradas al teatro. Será la próxima"
+    }
+
     if (isCorrect) {
       puntos += 30
 
