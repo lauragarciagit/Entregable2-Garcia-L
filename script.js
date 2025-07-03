@@ -58,11 +58,17 @@ buttons.forEach((button) => {
     //Mensaje ganador
     const puntosGanador = document.getElementById("puntosGanador")
     if (puntos >=200) {
-        puntosGanador.innerText = "Felicitaciones! Ganaste 2 entradas al teatro!!"
-        puntosGanador.style.color = "#4CAF30"
+        puntosGanador.innerText = "Felicitaciones! 🎉 ¡Ganaste! 🎉 2 entradas al teatro!!"
+        puntosGanador.style.color = "#9C27B0"    // violeta fuerte
+        puntosGanador.style.fontSize = "1.2rem"  // tamaño chico
+        puntosGanador.style.fontWeight = "bold"  // negrita
+        puntosGanador.style.textShadow = "1px 1px 2px black"  // opcional: para más impacto visual
 
     }   else {
-        puntosGanador.innerText = "Estuviste cerca de ganarte unas entradas al teatro. Será la próxima"
+        puntosGanador.innerText = "Estuviste cerca de ganarte unas entradas al teatro 😞 Será la próxima..."
+        puntosGanador.style.color = "#8D6E63"    // violeta apagado
+        puntosGanador.style.fontSize = "1.2rem"  // tamaño chico
+        
     }
 
     if (isCorrect) {
