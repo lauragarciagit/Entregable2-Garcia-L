@@ -1,3 +1,4 @@
+//Ingreso de nombre
 const nombre = document.getElementById("nombre")
 const btnEnviar = document.getElementById("btnEnviar")
 const mensaje = document.getElementById("mensaje")
@@ -64,7 +65,7 @@ buttons.forEach((button) => {
         puntosGanador.style.fontWeight = "bold"  // negrita
         puntosGanador.style.textShadow = "1px 1px 2px black"  // opcional: para más impacto visual
 
-    }   else {
+    } else {
         puntosGanador.innerText = "Estuviste cerca de ganarte unas entradas al teatro 😞 Será la próxima..."
         puntosGanador.style.color = "#8D6E63"    // violeta apagado
         puntosGanador.style.fontSize = "1.2rem"  // tamaño chico
